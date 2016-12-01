@@ -11,6 +11,7 @@
 
 <body>
     <div class="container">
+        <!-- Author -->
         <section class="author">
             <div class="author__avatar">
                 <img src="./build/images/avatar.png" alt="">
@@ -21,28 +22,43 @@
                 Подберу для вас самые лучшие предложения. Мои услуги абсолютно бесплатны
             </div>
         </section>
+        <!-- Services -->
         <section class="services">
-            <p class="text-right">Услуг</p>
+            <p class="text-right pad-right">Услуг</p>
             <div class="progress-outer">
                 <div class="progress" ng-repeat="services in services track by $index">
                     <div class="progress__bar {{services.classColor}}" ng-style="services.progressWidth">{{services.name}}</div>
                     <div class="progress__count"><b>{{services.count}}</b></div>
                 </div>
             </div>
-            <p>Всего</p>
-            <div class="text-right"><b>{{servicesCount}}</b></div>
+            <div class="float-right pad-right font-lg"><b>{{servicesCount}}</b></div>
+            <p class="font-lg"><b>Всего</b></p>
         </section>
+        <!-- Settings Form -->
+        <form name="formSettings" class="form mg-bottom">
+            <input type="radio" id="last" name="comments" class="hidden" checked>
+            <label for="last" class="form__radiobox">Последние отзывы</label>
+            <input type="radio" id="all" name="comments" class="hidden">
+            <label for="all" class="form__radiobox">Все отзывы</label>
+            <div class="float-right aligner">
+                <img src="build/images/heart.png" alt="like"><span class="form__stats">113</span>
+                <img src="build/images/comment.png" alt="comment"><span class="form__stats">{{list.length}}</span>
+            </div>
+        </form>
+        <!-- Comments -->
         <section>
-            <div class="feedback" ng-repeat="feedback in list track by $index | limitTo: 3">
+            <div class="feedback" ng-repeat="feedback in list track by $index">
                 <p class="feedback__author"><b>{{feedback.author}}</b></p>
-                <p class="feedback__date">{{feedback.date}}</p>
+                <p class="feedback__date">{{ feedback.date | date: "dd MMMM yyyy"}}</p>
                 <p class="feedback__text">{{feedback.message}}</p>
             </div>
         </section>
-        <form class="form" name="form" ng-submit="msgSend()">
+        <!-- Message Form -->
+        <form class="form form_padded form_bg" name="formMessage" ng-submit="msgSend()">
+            <p><b>Ваше имя:</b></p>
+            <input type="text" ng-model="author" class="form__input" required="required">
             <textarea name="message" class="form__message" ng-model="message" ng-enter-directive="msgSend()" required="required"></textarea>
-            <!-- <input type="text" ng-model="author" required="required"> -->
-            <button type="submit" class="form__submit" ng-disabled="form.$invalid" ng-class="{'disabled' : form.$invalid}">Написать консультанту</button>
+            <button type="submit" class="form__submit" ng-disabled="formMessage.$invalid" ng-class="{'disabled' : formMessage.$invalid}">Написать консультанту</button>
         </form>
     </div>
     <link rel="stylesheet" href="./build/css/main.css">

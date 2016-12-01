@@ -3,10 +3,18 @@ body {
     font-size: $font-size;
 }
 
-div,
-p,
-section {
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+* {
     box-sizing: border-box;
+}
+
+a {
+    color: $color-link;
 }
 
 .text-right {
@@ -21,6 +29,35 @@ section {
     text-align: center;
 }
 
+.font-lg {
+    font-size: $font-size-lg;
+}
+
 .silver {
     color: $color-silver;
+}
+
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+.pad-right {
+    padding-right: 32px;
+}
+
+.mg-bottom {
+    margin-bottom: 18px;
+}
+
+.hidden {
+    display: none;
+}
+
+.aligner {
+    display: flex;
+    align-items: center;
 }

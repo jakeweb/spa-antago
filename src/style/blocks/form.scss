@@ -1,9 +1,14 @@
 .form {
-    padding: 30px 20px;
-    background: $color-light-grey;
+    &.form_bg {
+        background: $color-light-grey;
+    }
+    &.form_padded {
+        padding: 30px 20px;
+    }
     .form__message {
         width: 100%;
         height: 63px;
+        padding: 5px 15px;
         margin-bottom: 23px;
         resize: none;
         border: $border;
@@ -24,6 +29,29 @@
         &.disabled {
             opacity: 0.5;
             cursor: not-allowed;
+        }
+    }
+    .form__radiobox {
+        text-decoration: underline;
+        color: $color-link;
+        cursor: pointer
+    }
+    .form__input {
+        display: block;
+        width: 100%;
+        padding: 5px 15px;
+        margin-bottom: 15px;
+    }
+    input[type=radio]:checked + .form__radiobox {
+        font-weight: bold;
+        text-decoration: none;
+        color: #000;
+    }
+    .form__stats {
+        display: inline-block;
+        margin-left: 4px;
+        &:not(:last-child) {
+            margin-right: 20px;
         }
     }
 }

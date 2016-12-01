@@ -1,0 +1,47 @@
+.services {
+    padding-left: $logo-width+10;
+    .progress-outer {
+        position: relative;
+        border-top: $border;
+        border-bottom: $border;
+        margin-bottom: 15px;
+        padding: 14px 14px 14px 0;
+        &:before {
+        	position: absolute;
+        	top: 14px;
+        	left: 0;
+        	display: block;
+        	height: calc(100% - 30px);
+        	width: 1px;
+        	background-color: $border-color;
+        	content: "";
+        }
+        .progress {
+        	position: relative;
+        	margin-bottom: 2px;
+            .progress__bar {
+                position: relative;
+                min-width: 35px;
+                padding: 5px;
+                border-radius: 0 $border-radius $border-radius 0;
+                white-space: nowrap;
+                z-index: 1;
+                &.progress__bar_blue {
+                    background-color: rgba(48, 182, 238, 0.4);
+                }
+                &.progress__bar_green {
+                    background-color: rgba(60, 179, 5, 0.4);
+                }
+            }
+            .progress__count {
+                position: absolute;
+                height: 100%;
+                right: 0;
+                top: 0;
+                padding: 5px 18px;
+                text-align: center;
+                z-index: 2;
+            }
+        }
+    }
+}

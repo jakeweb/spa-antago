@@ -1,0 +1,40 @@
+.feedback {
+    .feedback__author,
+    .feedback__date {
+        display: inline-block;
+    }
+    .feedback__date {
+    	font-size: $font-size-sm;
+    	color: $color-silver;
+    }
+    .feedback__text {
+        position: relative;
+        margin-bottom: 20px;
+        padding: 20px;
+        border: $border;
+        background-color: $color-light-blue;
+        z-index: 1;
+        &:before,
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            transform: rotate(45deg);
+        }
+        &:before {
+            top: -8px;
+            left: 22px;
+            border-color: $border-color transparent transparent transparent;
+            border-width: 7px;
+        }
+        &:after {
+            top: -6px;
+            left: 23px;
+            border-color: $color-light-blue transparent transparent transparent;
+            border-width: 7px;
+        }
+    }
+}

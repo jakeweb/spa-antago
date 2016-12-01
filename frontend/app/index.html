@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="appCtrl">
+
+<head>
+    <title>Website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="/">
+    <script type="text/javascript" src="./build/js/angular.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <section class="author">
+            <div class="author__avatar">
+                <img src="./build/images/avatar.png" alt="">
+            </div>
+            <h1 class="h1 author__name">Вероника Ростова</h1>
+            <p class="silver font-sm">Менеджер по продажам</p>
+            <div class="author__slogan">
+                Подберу для вас самые лучшие предложения. Мои услуги абсолютно бесплатны
+            </div>
+        </section>
+        <section class="services">
+            <p class="text-right">Услуг</p>
+            <div class="progress-outer">
+                <div class="progress" ng-repeat="services in services track by $index">
+                    <div class="progress__bar {{services.classColor}}" ng-style="services.progressWidth">{{services.name}}</div>
+                    <div class="progress__count"><b>{{services.count}}</b></div>
+                </div>
+            </div>
+            <p>Всего</p>
+            <div class="text-right"><b>{{servicesCount}}</b></div>
+        </section>
+        <section>
+            <div class="feedback" ng-repeat="feedback in list track by $index | limitTo: 3">
+                <p class="feedback__author"><b>{{feedback.author}}</b></p>
+                <p class="feedback__date">{{feedback.date}}</p>
+                <p class="feedback__text">{{feedback.message}}</p>
+            </div>
+        </section>
+        <form class="form" name="form" ng-submit="msgSend()">
+            <textarea name="message" class="form__message" ng-model="message" ng-enter-directive="msgSend()" required="required"></textarea>
+            <!-- <input type="text" ng-model="author" required="required"> -->
+            <button type="submit" class="form__submit" ng-disabled="form.$invalid" ng-class="{'disabled' : form.$invalid}">Написать консультанту</button>
+        </form>
+    </div>
+    <link rel="stylesheet" href="./build/css/main.css">
+    <script type="text/javascript" src="./build/js/app.js"></script>
+</body>
+
+</html>

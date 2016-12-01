@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    font-size: $font-size;
+}
+
+div,
+p,
+section {
+    box-sizing: border-box;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.silver {
+    color: $color-silver;
+}

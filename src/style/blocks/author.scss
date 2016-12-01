@@ -1,0 +1,21 @@
+.author {
+    overflow: hidden;
+    .author__name {
+        margin: 5px 0;
+    }
+    .author__avatar {
+        float: left;
+        width: $logo-width;
+        height: $logo-height;
+        margin-right: 10px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .author__slogan {
+        margin-left: $logo-width/2;
+        padding: 10px 12px;
+        border: $border;
+        border-radius: $border-radius;
+        background: $color-yellow;
+    }
+}

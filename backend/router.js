@@ -1,6 +1,4 @@
 var path = require('path');
-var request = require('request');
-var qs = require('querystring');
 
 
 var router = {

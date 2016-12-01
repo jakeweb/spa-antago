@@ -5,8 +5,7 @@
     <title>Website</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <base href="/">
-    <script type="text/javascript" src="./build/js/angular.js"></script>
+    <script type="text/javascript" src="../build/js/angular.js"></script>
 </head>
 
 <body>
@@ -14,7 +13,7 @@
         <!-- Author -->
         <section class="author">
             <div class="author__avatar">
-                <img src="./build/images/avatar.png" alt="">
+                <img src="../build/images/avatar.png" alt="">
             </div>
             <h1 class="h1 author__name">Вероника Ростова</h1>
             <p class="silver font-sm">Менеджер по продажам</p>
@@ -41,8 +40,8 @@
             <input type="radio" id="all" name="comments" class="hidden">
             <label for="all" class="form__radiobox">Все отзывы</label>
             <div class="float-right aligner">
-                <img src="build/images/heart.png" alt="like"><span class="form__stats">113</span>
-                <img src="build/images/comment.png" alt="comment"><span class="form__stats">{{list.length}}</span>
+                <img src="../build/images/heart.png" alt="like"><span class="form__stats">113</span>
+                <img src="../build/images/comment.png" alt="comment"><span class="form__stats">{{list.length}}</span>
             </div>
         </form>
         <!-- Comments -->
@@ -61,8 +60,8 @@
             <button type="submit" class="form__submit" ng-disabled="formMessage.$invalid" ng-class="{'disabled' : formMessage.$invalid}">Написать консультанту</button>
         </form>
     </div>
-    <link rel="stylesheet" href="./build/css/main.css">
-    <script type="text/javascript" src="./build/js/app.js"></script>
+    <link rel="stylesheet" href="../build/css/main.css">
+    <script type="text/javascript" src="../build/js/app.js"></script>
 </body>
 
 </html>

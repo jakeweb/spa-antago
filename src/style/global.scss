@@ -11,10 +11,14 @@ html {
 
 * {
     box-sizing: border-box;
+    outline: none;
 }
 
 a {
     color: $color-link;
+}
+textarea {
+	overflow: auto; // remove scrollbar in IE
 }
 
 .text-right {

@@ -14,7 +14,6 @@
         "gulp-sass": "^2.3.2",
         "gulp-watch": "^4.3.11"
     },
-    "devDependencies": {},
     "repository": {
         "type": "git",
         "url": "git+https://github.com/jakeweb/spa-antago.git"

@@ -11,6 +11,9 @@ h1,
 .font-sm {
   font-size: 12px; }
 
+.font-lg {
+  font-size: 16px; }
+
 body {
   margin: 0;
   font-size: 14px; }
@@ -38,9 +41,6 @@ textarea {
 
 .text-center {
   text-align: center; }
-
-.font-lg {
-  font-size: 16px; }
 
 .silver {
   color: #808080; }
